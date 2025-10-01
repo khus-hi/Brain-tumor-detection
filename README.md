@@ -58,13 +58,19 @@ Run preprocessing script:
 <img width="657" height="58" alt="image" src="https://github.com/user-attachments/assets/86079efe-5389-4dda-8fa9-c629aeff65bd" />
 
 ## 📊 Results
+We compared the performance of ViT models trained with different patch sizes on the brain tumor dataset:
 
-We observed differences in classification performance depending on the patch size used:
+| Patch Size | Notes | Accuracy |
+|------------|-------|----------|
+| **12** | Finer-grained features, better detail capture | **0.8862** |
+| **15** | Balanced custom configuration | **0.8558** |
+| **20** | Larger patches, faster training but less detail | **0.8570** |
 
-Patch Size	       Notes	                                                  Performance
- 15	          Balanced custom configuration	                                  TBD
- 12	          Finer-grained features, potentially higher accuracy	            TBD
- 20  	        Larger patches, faster training, but risk of losing detail	    TBD
+### Key Insights:
+
+* Smaller patch size (12) provided the highest accuracy due to finer feature extraction.
+* Larger patch size (20) sped up training but slightly reduced accuracy.
+* Patch size 15 offered a balance but underperformed compared to 12.
 
 ## 📈 Future Work
 
