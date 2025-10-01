@@ -1,18 +1,74 @@
-# Brain-tumor-detection
-This project implements a deep learning pipeline for brain tumor classification using Vision Transformer (ViT) models with custom patch sizes: 15, 12, and 20. The ViT models are trained and evaluated on MRI images to detect different types of brain tumors.
+# Brain Tumor Detection using Vision Transformers (ViT)
 
-We experimented with different patch sizes to evaluate their effect on classification performance:
+This project implements a deep learning pipeline for brain tumor classification using Vision Transformer (ViT) models with custom patch sizes. The aim is to classify MRI scans into four categories: Glioma, Meningioma, Pituitary, and No Tumor.
 
-Patch Size	 	Notes
-  15		      Custom configuration
-  12		      Finer-grained image features
-  20		      Larger patches, faster training
+## 📌 Project Overview
 
-**Dataset:**  We use the Brain MRI Images for Brain Tumor Detection dataset, which includes three tumor types:
+Brain tumor detection from MRI scans is a critical task in medical image analysis. Traditional CNN-based models have shown good performance, but Vision Transformers (ViT) offer new opportunities to capture long-range dependencies and global contextual information.
 
-1. Glioma
-2. Meningioma
-3. Pituitary
-4. No Tumor
+In this project, we experiment with different patch sizes (15, 12, and 20) to analyze their effect on classification accuracy and training efficiency.
 
-Link: https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data
+## 🔬 Model Details
+
+Architecture: Vision Transformer (ViT)  
+Patch Sizes Tested:  
+15 → Custom configuration  
+12 → Finer-grained image features  
+20 → Larger patches, faster training
+
+## 📂 Dataset
+
+We use the Brain MRI Images for Brain Tumor Detection dataset from Kaggle:
+
+https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data
+
+The dataset contains MRI scans classified into four categories:
+
+* Glioma  
+* Meningioma  
+* Pituitary  
+* No Tumor
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository:
+
+  <img width="640" height="78" alt="image" src="https://github.com/user-attachments/assets/d166d4d0-6299-4081-b0af-0660199b8f0a" />  
+
+### 2. Install dependencies:
+
+   <img width="553" height="69" alt="image" src="https://github.com/user-attachments/assets/467c94c8-f61d-4477-a195-b35ab8239277" />
+
+## 🚀 Usage
+
+### 1. Preprocess Dataset
+
+Place dataset in data/ directory
+
+Run preprocessing script:
+
+<img width="523" height="62" alt="image" src="https://github.com/user-attachments/assets/618544a4-8126-4a5f-acbd-86880a068e6b" />
+
+### 2. Train the Model 
+
+<img width="610" height="109" alt="image" src="https://github.com/user-attachments/assets/a106d58b-f1b1-4b99-ad80-97b5b46d1580" />
+
+### 3. Evaluate the Model
+
+<img width="657" height="58" alt="image" src="https://github.com/user-attachments/assets/86079efe-5389-4dda-8fa9-c629aeff65bd" />
+
+## 📊 Results
+
+We observed differences in classification performance depending on the patch size used:
+
+Patch Size	       Notes	                                                  Performance
+ 15	          Balanced custom configuration	                                  TBD
+ 12	          Finer-grained features, potentially higher accuracy	            TBD
+ 20  	        Larger patches, faster training, but risk of losing detail	    TBD
+
+## 📈 Future Work
+
+* Experiment with hybrid CNN-ViT models
+* Apply data augmentation for improved generalization
+* Optimize hyperparameters (learning rate, batch size, optimizer)
+* Explore transfer learning from pre-trained ViTs
